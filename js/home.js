@@ -13,15 +13,15 @@ document.getElementById('btn-add-money')
 
     console.log(inputPin);
 
-    // validating pin but not the write way (for learning purpose)
+    //step:3- validating pin but not the write way (for learning purpose)
     if(inputPin === '1234'){
         console.log('Adding Your Money to The Account')
 
-        // get the current balance
+        //step-4-- get the current balance
         const currentBalance = document.getElementById('current-balance').innerText;
         console.log(currentBalance)
 
-        // add money to the current balance (currentBalance + inputMoney)
+        //step-5: add money to the current balance (currentBalance + inputMoney)
         const currentBalanceNumber = parseFloat(currentBalance);
         const inputMoneyNumber = parseFloat(inputMoney)
 
