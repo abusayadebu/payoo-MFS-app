@@ -8,8 +8,34 @@ document.getElementById('btn-add-money')
     
     // step:2-- get money from input
     const inputMoney = document.getElementById('input-amount').value;
+    console.log(inputMoney)
     const inputPin = document.getElementById('input-pin').value;
 
-    console.log(inputMoney, inputPin)
+    console.log(inputPin);
+
+    // validating pin but not the write way (for learning purpose)
+    if(inputPin === '1234'){
+        console.log('Adding Your Money to The Account')
+
+        // get the current balance
+        const currentBalance = document.getElementById('current-balance').innerText;
+        console.log(currentBalance)
+
+        // add money to the current balance (currentBalance + inputMoney)
+        const currentBalanceNumber = parseFloat(currentBalance);
+        const inputMoneyNumber = parseFloat(inputMoney)
+
+        const updatedBalance = currentBalanceNumber + inputMoneyNumber;
+        console.log(updatedBalance);
+
+        // step:6-- update the balance into UI/dom
+        document.getElementById('current-balance').innerText = updatedBalance;
+
+    }
+    else{
+        alert('Incorrect Pin, Please Provide the Correct Pin')
+    }
+
+
     
 })
