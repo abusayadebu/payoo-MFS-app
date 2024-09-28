@@ -11,7 +11,7 @@ document.getElementById('login-button')
     // bad way to validate the credentials (only for learning purpose)
     if(phoneNumber === '0123456789' && pinNumber === '1234'){
         console.log('You are logged in');
-        window.location.href = '/home.html';
+        window.location.href = './home.html';
     }
     else{
         alert('Wrong Credencials');
